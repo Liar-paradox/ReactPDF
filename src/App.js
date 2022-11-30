@@ -1,5 +1,5 @@
 import {useState} from 'react'
-
+ 
 // Import Worker
 import { Worker } from '@react-pdf-viewer/core';
 // Import the main Viewer component
@@ -23,6 +23,11 @@ function App() {
 
   // pdf file error state
   const [pdfError, setPdfError]=useState('');
+  
+  
+  //variables inputs
+  const [name] = useState("");
+  const [invoice_nr] = useState("")
 
 
   // handle file onChange event
@@ -85,6 +90,17 @@ function App() {
       </div>
 
       {/* Form for inputs */}
+      
+      <form>
+        <div className='inputs'>
+        <label>Name:
+          <input type="text" value={name}/>
+        </label>
+        <label>Invoice
+          <input type="text" value={invoice_nr}/>
+        </label>
+        </div>
+      </form>
       
 
     </div>
